@@ -21,6 +21,8 @@ class ViewController: UIViewController {
     var pauseFlg = false
     var status = Status.others
     
+    @IBOutlet weak var titleLabel: UILabel!
+    
     @IBOutlet weak var baseTurnView: UIView!
     
     @IBOutlet weak var restAnimView: SpringView!
@@ -76,6 +78,13 @@ class ViewController: UIViewController {
         
         if !pauseFlg {
             stats = Stats.prepare
+            
+            titleLabel.text = "READY"
+            titlelabel.textColor = UIColor.yellow
+            titlelabel.animation = "fadeInLeft"
+            titleLabel.duration = Duration.startTitleDuration
+            titleLabel.animate()
+            
         } else {
             
         }
@@ -98,6 +107,7 @@ class ViewController: UIViewController {
 enum Duration {
     let TimerUpdateDuration = 1.0
     let prepareAnimDuration = 1.0
+    let startTitleDuration = 1.0
 }
 
 enum Scale {

@@ -121,6 +121,7 @@
                         <outlet property="setGraph" destination="lCR-il-w5Q" id="CUa-U2-Ylg"/>
                         <outlet property="startButton" destination="0so-hY-VBu" id="foT-Iu-ieb"/>
                         <outlet property="stopButton" destination="IMm-S3-rHm" id="PDG-uu-hgV"/>
+                        <outlet property="titleLabel" destination="f1u-ZB-VLf" id="Zdl-56-zjq"/>
                         <outlet property="totalGraph" destination="5l5-PF-vZh" id="Ax5-sH-x5T"/>
                         <outlet property="workOutAnimView" destination="2wB-0h-dr8" id="ZiM-iW-ZuN"/>
                         <outlet property="workOutGraph" destination="GRK-8D-6DQ" id="QQd-VM-wkO"/>
