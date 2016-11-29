@@ -15,6 +15,12 @@ import MediaPlayer
 
 class ViewController: UIViewController {
     
+    let talker = AVSpeechSynthesizer()
+    var timer = Timer()
+    var angleHolder:CGFloat = 0
+    var pauseFlg = false
+    var status = Status.others
+    
     @IBOutlet weak var baseTurnView: UIView!
     
     @IBOutlet weak var restAnimView: SpringView!
@@ -27,6 +33,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var setGraph: MBCircularProgressBarView!
     @IBOutlet weak var totalGraph: MBCircularProgressBarView!
     
+    @IBOutlet weak var startButton: UIButton!
+    @IBOutlet weak var stopButton: UIButton!
+    @IBOutlet weak var pauseButton: UIButton!
     
     
     override func viewDidLoad() {
@@ -39,6 +48,67 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func startTimer(_ sender: AnyObject) {
+        
+        //【AVSpeechUtterance】
+        // - iOS7で追加された音声読み上げライブラリ
+        // - http://dev.classmethod.jp/smartphone/iphone/swfit-avspeechsynthesizer/
+        
+        let utterance = AVSpeechUtterance(string: "Ready")
+        utterance.voice = AVSpeechSynthesisVoice(language: "en-US")
+        talker.speak(utterance)
+        
+        timer = Timer.scheduledTimer(timeInterval: TimeInterval(Duration().TimerUpdateDuration), target:self, selector:#selector(self.onUpdate), userInfo:nil, repeats:true)
+        timer.fire()
+        
+        prepareAnimView.animation = "morph"
+        prepareAnimView.duration = Duration().prepareAnimDuration
+        prepareAnimView.animate()
+        
+        turnBaseView(ang: angleHolder)
+        turnTimerView(subview: workOutGraph, ang: -angleHolder, scale: Scale.goBack)
+        turnTimerView(subview: prepareGraph, ang: -angleHolder, scale: Scale.comeFrount)
+        turnTimerView(subview: restGraph, ang: -angleHolder, scale: Scale.goBack)
+        
+        startButton.isHidden = true
+        stopButton.isHidden = false
+        pauseButton.isHidden = false
+        
+        if !pauseFlg {
+            stats = Stats.prepare
+        } else {
+            
+        }
+        
+    }
 
+    func onUpdate(timer:Timer) {
+        
+    }
+    
+    func turnBaseView(ang:CGFloat) {
+        
+    }
+    
+    func turnTimerView(subview:UIView, ang:CGFloat, scale:CGFloat) {
+        
+    }
 }
 
+enum Duration {
+    let TimerUpdateDuration = 1.0
+    let prepareAnimDuration = 1.0
+}
+
+enum Scale {
+    let comeFront = 1.0
+    let goBack = 0.5
+}
+
+enum Status {
+    let prepare = 1
+    let rest    = 2
+    let workOut = 3
+    let pause   = 4
+    let others  = 0
+}
