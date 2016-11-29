@@ -108,6 +108,17 @@
                             <constraint firstItem="9Co-zZ-c9M" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="10" id="g0A-bV-usv"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="baseTurnView" destination="9Co-zZ-c9M" id="arN-XN-wxM"/>
+                        <outlet property="prepareAnimView" destination="eSx-ko-peR" id="JnH-Tf-tJC"/>
+                        <outlet property="prepareGraph" destination="f9e-fG-QSK" id="PI7-yT-HZj"/>
+                        <outlet property="restAnimView" destination="4dh-3d-the" id="2Vd-4i-TFG"/>
+                        <outlet property="restGraph" destination="LF1-bD-7HU" id="GRi-jE-mIQ"/>
+                        <outlet property="setGraph" destination="lCR-il-w5Q" id="CUa-U2-Ylg"/>
+                        <outlet property="totalGraph" destination="5l5-PF-vZh" id="Ax5-sH-x5T"/>
+                        <outlet property="workOutAnimView" destination="2wB-0h-dr8" id="ZiM-iW-ZuN"/>
+                        <outlet property="workOutGraph" destination="GRK-8D-6DQ" id="QQd-VM-wkO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

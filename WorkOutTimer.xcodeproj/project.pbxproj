@@ -13,6 +13,7 @@
 		DA161BC51DEC7AE500C8E24C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA161BC31DEC7AE500C8E24C /* Main.storyboard */; };
 		DA161BC71DEC7AE500C8E24C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA161BC61DEC7AE500C8E24C /* Assets.xcassets */; };
 		DA161BCA1DEC7AE500C8E24C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA161BC81DEC7AE500C8E24C /* LaunchScreen.storyboard */; };
+		DA161BD21DEDB51100C8E24C /* MBCircularProgressBar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA161BD11DEDB51100C8E24C /* MBCircularProgressBar.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		DA161BC61DEC7AE500C8E24C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DA161BC91DEC7AE500C8E24C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DA161BCB1DEC7AE600C8E24C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DA161BD11DEDB51100C8E24C /* MBCircularProgressBar.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MBCircularProgressBar.framework; path = "../../../../../Library/Developer/Xcode/DerivedData/WorkOutTimer-crzqskzdskutjecrcfiwttsjqhkf/Build/Products/Debug-iphonesimulator/MBCircularProgressBar/MBCircularProgressBar.framework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA161BD21DEDB51100C8E24C /* MBCircularProgressBar.framework in Frameworks */,
 				4E76EFF58BE943ECE639DE11 /* Pods_WorkOutTimer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -43,6 +46,7 @@
 		6D65F19CDDE700985E41DADC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DA161BD11DEDB51100C8E24C /* MBCircularProgressBar.framework */,
 				294453B873A807193ABB8FA1 /* Pods_WorkOutTimer.framework */,
 			);
 			name = Frameworks;
@@ -265,6 +269,8 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT) ";
+				"FRAMEWORK_SEARCH_PATHS[arch=*]" = "";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -279,7 +285,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -322,7 +328,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -336,6 +342,21 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = E6657QAX73;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$PODS_CONFIGURATION_BUILD_DIR/GoogleToolboxForMac\"",
+					"\"$PODS_CONFIGURATION_BUILD_DIR/MBCircularProgressBar\"",
+					"\"$PODS_CONFIGURATION_BUILD_DIR/Spring\"",
+					"\"${PODS_ROOT}/FirebaseAnalytics/Frameworks/frameworks\"",
+					"\"${PODS_ROOT}/FirebaseCore/Frameworks/frameworks\"",
+					"\"${PODS_ROOT}/FirebaseInstanceID/Frameworks/frameworks\"",
+					"\"${PODS_ROOT}/Google-Mobile-Ads-SDK/Frameworks\"",
+					"\"${PODS_ROOT}/Google/Frameworks\"",
+					"\"${PODS_ROOT}/GoogleInterchangeUtilities/Frameworks/frameworks\"",
+					"\"${PODS_ROOT}/GoogleSymbolUtilities/Frameworks/frameworks\"",
+					"$(SRCROOT)",
+				);
+				"FRAMEWORK_SEARCH_PATHS[arch=*]" = "$(SRCROOT) ";
 				INFOPLIST_FILE = WorkOutTimer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jp.co.yuri.a..WorkOutTimer;
