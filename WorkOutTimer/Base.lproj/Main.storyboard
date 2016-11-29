@@ -82,6 +82,9 @@
                                 <frame key="frameInset" minX="157" minY="528" width="60" height="60"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="Play"/>
+                                <connections>
+                                    <action selector="startTimer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Xt5-eU-yYP"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S9g-5V-f9P">
                                 <frame key="frameInset" minX="80" minY="528" width="60" height="60"/>
@@ -110,11 +113,14 @@
                     </view>
                     <connections>
                         <outlet property="baseTurnView" destination="9Co-zZ-c9M" id="arN-XN-wxM"/>
+                        <outlet property="pauseButton" destination="S9g-5V-f9P" id="dXu-UA-cNg"/>
                         <outlet property="prepareAnimView" destination="eSx-ko-peR" id="JnH-Tf-tJC"/>
                         <outlet property="prepareGraph" destination="f9e-fG-QSK" id="PI7-yT-HZj"/>
                         <outlet property="restAnimView" destination="4dh-3d-the" id="2Vd-4i-TFG"/>
                         <outlet property="restGraph" destination="LF1-bD-7HU" id="GRi-jE-mIQ"/>
                         <outlet property="setGraph" destination="lCR-il-w5Q" id="CUa-U2-Ylg"/>
+                        <outlet property="startButton" destination="0so-hY-VBu" id="foT-Iu-ieb"/>
+                        <outlet property="stopButton" destination="IMm-S3-rHm" id="PDG-uu-hgV"/>
                         <outlet property="totalGraph" destination="5l5-PF-vZh" id="Ax5-sH-x5T"/>
                         <outlet property="workOutAnimView" destination="2wB-0h-dr8" id="ZiM-iW-ZuN"/>
                         <outlet property="workOutGraph" destination="GRK-8D-6DQ" id="QQd-VM-wkO"/>
