@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4E76EFF58BE943ECE639DE11 /* Pods_WorkOutTimer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 294453B873A807193ABB8FA1 /* Pods_WorkOutTimer.framework */; };
 		DA161BC01DEC7AE500C8E24C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA161BBF1DEC7AE500C8E24C /* AppDelegate.swift */; };
 		DA161BC21DEC7AE500C8E24C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA161BC11DEC7AE500C8E24C /* ViewController.swift */; };
 		DA161BC51DEC7AE500C8E24C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA161BC31DEC7AE500C8E24C /* Main.storyboard */; };
@@ -15,6 +16,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		294453B873A807193ABB8FA1 /* Pods_WorkOutTimer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WorkOutTimer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5A9FC8FD5EC117938D49CC3E /* Pods-WorkOutTimer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WorkOutTimer.release.xcconfig"; path = "Pods/Target Support Files/Pods-WorkOutTimer/Pods-WorkOutTimer.release.xcconfig"; sourceTree = "<group>"; };
+		CA395549DC5C6D09EB10101B /* Pods-WorkOutTimer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WorkOutTimer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WorkOutTimer/Pods-WorkOutTimer.debug.xcconfig"; sourceTree = "<group>"; };
 		DA161BBC1DEC7AE500C8E24C /* WorkOutTimer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WorkOutTimer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA161BBF1DEC7AE500C8E24C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DA161BC11DEC7AE500C8E24C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -29,17 +33,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E76EFF58BE943ECE639DE11 /* Pods_WorkOutTimer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6D65F19CDDE700985E41DADC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				294453B873A807193ABB8FA1 /* Pods_WorkOutTimer.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		DA161BB31DEC7AE500C8E24C = {
 			isa = PBXGroup;
 			children = (
 				DA161BBE1DEC7AE500C8E24C /* WorkOutTimer */,
 				DA161BBD1DEC7AE500C8E24C /* Products */,
+				EF3004F72E79550AE1FEBC98 /* Pods */,
+				6D65F19CDDE700985E41DADC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +79,15 @@
 			path = WorkOutTimer;
 			sourceTree = "<group>";
 		};
+		EF3004F72E79550AE1FEBC98 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CA395549DC5C6D09EB10101B /* Pods-WorkOutTimer.debug.xcconfig */,
+				5A9FC8FD5EC117938D49CC3E /* Pods-WorkOutTimer.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +95,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DA161BCE1DEC7AE600C8E24C /* Build configuration list for PBXNativeTarget "WorkOutTimer" */;
 			buildPhases = (
+				CA909953978174C3194D230C /* [CP] Check Pods Manifest.lock */,
 				DA161BB81DEC7AE500C8E24C /* Sources */,
 				DA161BB91DEC7AE500C8E24C /* Frameworks */,
 				DA161BBA1DEC7AE500C8E24C /* Resources */,
+				BC00B8E98004E1647492D846 /* [CP] Embed Pods Frameworks */,
+				F3BBFBE09AC2018545E8795B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -131,6 +158,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		BC00B8E98004E1647492D846 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WorkOutTimer/Pods-WorkOutTimer-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CA909953978174C3194D230C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F3BBFBE09AC2018545E8795B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WorkOutTimer/Pods-WorkOutTimer-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		DA161BB81DEC7AE500C8E24C /* Sources */ = {
@@ -257,6 +332,7 @@
 		};
 		DA161BCF1DEC7AE600C8E24C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CA395549DC5C6D09EB10101B /* Pods-WorkOutTimer.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = E6657QAX73;
@@ -270,6 +346,7 @@
 		};
 		DA161BD01DEC7AE600C8E24C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5A9FC8FD5EC117938D49CC3E /* Pods-WorkOutTimer.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = E6657QAX73;
@@ -300,6 +377,7 @@
 				DA161BD01DEC7AE600C8E24C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
