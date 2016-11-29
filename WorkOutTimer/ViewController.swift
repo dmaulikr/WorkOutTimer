@@ -20,6 +20,7 @@ class ViewController: UIViewController {
     var angleHolder:CGFloat = 0
     var pauseFlg = false
     var status = Status.others
+    var musicPlayer = MPMusicPlayerController
     
     @IBOutlet weak var titleLabel: UILabel!
     
@@ -42,7 +43,14 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        musicPlayer = MPMusicPlayerController.applicationMusicPlayer()
+        musicPlayer.beginGeneratingPlaybackNotifications()
+        
+        graphInit()
+        restAll()
+        
+        setUpTimer()
     }
 
     override func didReceiveMemoryWarning() {
@@ -50,6 +58,18 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    func graphInit() {
+    
+    }
+    
+    func resetAll() {
+        
+    }
+    
+    func setUpTimer() {
+        
+    }
+    
     @IBAction func startTimer(_ sender: AnyObject) {
         
         //【AVSpeechUtterance】
