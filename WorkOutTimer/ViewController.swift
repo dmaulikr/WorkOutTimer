@@ -60,6 +60,23 @@ class ViewController: UIViewController {
 
     func graphInit() {
     
+        baseTurnView.frame.size = CGSize(width: UIScreen.main.bounds.size.height * 0.55, height: UIScreen.main.bounds.size.height * 0.55 )
+        baseTurnView.x = self.view.center.x
+        
+        workOutAnimView.frame.size = CGSize(width:baseTurnView.frame.size.width * 0.7, height: baseTurnView.frame.size.height * 0.7 )
+        workOutGraph.frame.size = workOutAnimView.frame.size
+        
+        prepareAnimView.frame.size = CGSize(width:baseTurnView.frame.size.width * 0.7, height: baseTurnView.frame.size.height * 0.7 )
+        prepareGraph.frame.size = prepareAnimView.frame.size
+        
+        restAnimView.frame.size = CGSize(width:baseTurnView.frame.size.width * 0.7, height: baseTurnView.frame.size.height * 0.7 )
+        restGraph.frame.size = restAnimView.frame.size
+        
+        setGraph.frame.size = CGSize(width: 60, height: 60)
+        titleLabel.center.x = self.view.center.x
+        
+        workOutGraph.tag = 3
+        workOutGraph.value = ceil(Settings().workOutTime)
     }
     
     func resetAll() {
@@ -141,4 +158,16 @@ enum Status {
     let workOut = 3
     let pause   = 4
     let others  = 0
+}
+
+enum Settings {
+    var workOutTime:CGFloat = 20
+    var prepareTime:CGFloat = 10
+    var restTime:CGFloat = 10
+    var setCounter:CGFloat = 8
+    var endTime:CGFloat
+    
+    init() {
+        endTime = prepareTime + ( workOutTime + resTime ) * setCounter - restTime
+    }
 }
