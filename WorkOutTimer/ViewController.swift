@@ -75,8 +75,89 @@ class ViewController: UIViewController {
         setGraph.frame.size = CGSize(width: 60, height: 60)
         titleLabel.center.x = self.view.center.x
         
+        /*Graph layout*/
+        prepareGraph.tag = 1
+        prepareGraph.value = ceil(Settings().workOutTime)
+        prepareGraph.maxValue = Settings().workOutTime
+        prepareGraph.valueFontSize = 50
+        prepareGraph.progressAngle = 100
+        prepareGraph.progressLineWidth = 4
+        prepareGraph.emptyLineWidth = 4
+        prepareGraph.unitString = String().unit
+        prepareGraph.unitFontSize = 20
+        prepareGraph.progressCapType = 0
+        prepareGraph.progressRotationAngle = 0
+        prepareGraph.fontColor = Color().fontColor
+        prepareGraph.progressColor = Color().red
+        prepareGraph.progressStrokeColor = Color().red
+        prepareGraph.emptyLineColor = Color().gray
+        
+        restGraph.tag = 2
+        restGraph.value = ceil(Settings().restTime)
+        restGraph.maxValue = Settings().restTime
+        restGraph.valueFontSize = 50
+        restGraph.progressAngle = 100
+        restGraph.progressLineWidth = 4
+        restGraph.emptyLineWidth = 4
+        restGraph.unitString = String().unit
+        restGraph.unitFontSize = 20
+        restGraph.progressCapType = 0
+        restGraph.progressRotationAngle = 0
+        restGraph.fontColor = Color().fontColor
+        restGraph.progressColor = Color().blue
+        restGraph.progressStrokeColor = Color().blue
+        restGraph.emptyLineColor = Color().gray
+        
         workOutGraph.tag = 3
-        workOutGraph.value = ceil(Settings().workOutTime)
+        workOutGraph.value = ceil(Settings().restTime)
+        workOutGraph.maxValue = Settings().restTime
+        workOutGraph.valueFontSize = 50
+        workOutGraph.progressAngle = 100
+        workOutGraph.progressLineWidth = 4
+        workOutGraph.emptyLineWidth = 4
+        workOutGraph.unitString = String().unit
+        workOutGraph.unitFontSize = 20
+        workOutGraph.progressCapType = 0
+        workOutGraph.progressRotationAngle = 0
+        workOutGraph.fontColor = Color().fontColor
+        workOutGraph.progressColor = Color().yellow
+        workOutGraph.progressStrokeColor = Color().yellow
+        workOutGraph.emptyLineColor = Color().gray
+        
+        Graph_Set.tag = 4
+        Graph_Set.value = ceil( CGFloat(Settings().counter_set) )
+        Graph_Set.maxValue = CGFloat(Settings().counter_set)
+        Graph_Set.valueFontSize = 20
+        Graph_Set.progressAngle = 100
+        Graph_Set.progressLineWidth = 2
+        Graph_Set.unitString = ""//Design().unitString
+        Graph_Set.emptyLineWidth = 2
+        Graph_Set.unitFontSize = 10
+        Graph_Set.progressCapType = 0
+        Graph_Set.progressRotationAngle = 0
+        Graph_Set.fontColor = Design().FontColor
+        Graph_Set.progressColor = design.Orange
+        Graph_Set.progressStrokeColor = design.Orange
+        Graph_Set.emptyLineColor = UIColor.gray
+        
+        Graph_Total.tag = 5
+        Graph_Total.value = ceil( CGFloat(Settings().endTime) )
+        Graph_Total.maxValue = CGFloat(Settings().endTime)
+        Graph_Total.valueFontSize = 20
+        Graph_Total.progressAngle = 100
+        Graph_Total.progressLineWidth = 2
+        Graph_Total.unitString = ""//Design().unitString
+        Graph_Total.emptyLineWidth = 2
+        Graph_Total.unitFontSize = 10
+        Graph_Total.progressCapType = 0
+        Graph_Total.progressRotationAngle = 0
+        Graph_Total.fontColor = Design().FontColor
+        Graph_Total.progressColor = design.Orange
+        Graph_Total.progressStrokeColor = design.Orange
+        Graph_Total.emptyLineColor = UIColor.gray
+        
+        /*Graph position*/
+        
     }
     
     func resetAll() {
@@ -170,4 +251,17 @@ enum Settings {
     init() {
         endTime = prepareTime + ( workOutTime + resTime ) * setCounter - restTime
     }
+}
+
+enum String {
+    var unit = "Sec"
+}
+
+enum Color {
+    var fontColor = formatter().colorWithHexString(hex: "6F7179", Alpha: 1.0 )
+    let yellow:UIColor = formatter().colorWithHexString(hex: "B9AD1E", Alpha: 1.0)
+    let red:UIColor = formatter().colorWithHexString(hex: "CC2D62", Alpha: 1.0)
+    let blue:UIColor = formatter().colorWithHexString(hex: "2D8CDD", Alpha: 1.0)
+    let green:UIColor = formatter().colorWithHexString(hex: "70BF41", Alpha: 1.0)
+    let orange:UIColor = formatter().colorWithHexString(hex: "F39019", Alpha: 1.0)
 }
