@@ -157,6 +157,8 @@ class ViewController: UIViewController {
         Graph_Total.emptyLineColor = UIColor.gray
         
         /*Graph position*/
+        //
+        //
         
     }
     
